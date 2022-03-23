@@ -10,6 +10,7 @@ public class Main {
 		DemoStream.sortableList();
 		DemoStream.sortableListOfIterable();
 		DemoStream.sortableListOfStream();
+		DemoStream.sortableListOfStreamByDouble();
 	}
 
 }

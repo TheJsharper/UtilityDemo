@@ -73,6 +73,20 @@ public class DemoStream {
 		System.out.println("Sort ascending by age of students collections");
 		ss.forEach(System.out::println);
 	}
+	public static void sortableListOfStreamByDouble() {
+		
+		System.out.println("Sort by Tall");
+		Iterator<Student> students = getIterableStudents();
+		
+		Spliterator<Student> s = Spliterators.spliteratorUnknownSize(students, 0);
+		List<Student> ss = StreamSupport.stream(s, false).collect(Collectors.toList());
+		ss.sort((a, b) -> a.tall < b.tall? 1: -1);
+		System.out.println("Sort descending by tall of students collections");
+		ss.forEach(System.out::println);
+		ss.sort((a, b) -> a.tall > b.tall? 1: -1);
+		System.out.println("Sort ascending by tall of students collections");
+		ss.forEach(System.out::println);
+	}
 
 	private static List<Student> getStudents() {
 		return new ArrayList<Student>() {
@@ -129,8 +143,10 @@ public class DemoStream {
 
 		@Override
 		public String toString() {
-			return "Student [name=" + name + ", age=" + age + "]";
+			return "Student [name=" + name + ", age=" + age + ", tall=" + tall + "]";
 		}
+
+		
 
 	}
 }
