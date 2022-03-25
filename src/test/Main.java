@@ -1,6 +1,6 @@
 package test;
 
-import test.demo.DemoStream;
+import test.demo.streams.DemoStream;
 
 public class Main {
 

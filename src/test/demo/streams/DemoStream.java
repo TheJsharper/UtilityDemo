@@ -1,4 +1,4 @@
-package test.demo;
+package test.demo.streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-public class DemoStream {
+public  class DemoStream {
 
 	public static void concatCollection() {
 
@@ -21,6 +21,7 @@ public class DemoStream {
 
 		Stream.concat(collectionA.stream(), collectionB.stream()).forEach((String item) -> System.out.println(item));
 	}
+
 
 	public static void combineCollectionByFlatMap() {
 		Collection<String> collectionA = Arrays.asList("First Collection Item 1", "First Collection Item 2  ");
@@ -110,6 +111,7 @@ public class DemoStream {
 
 			{
 				add(new Student("Max", 35, 1.60));
+				add(new Student("Jake The Same", 15, 2.14));
 				add(new Student("Bertha", 25, 1.55));
 				add(new Student("Judith", 45, 1.98));
 				add(new Student("Jake", 15, 2.14));
