@@ -2,7 +2,7 @@ package test.demo.multithreaded;
 
 import java.util.stream.IntStream;
 
-public class SumOfNumberRunnable {
+public class SumOfNumberRunnableOldStyle {
 	public static int[] numbers = IntStream.rangeClosed(0, 5000).toArray();
 	public static int sum = 0;
 	public static int sumVerification = IntStream.rangeClosed(0, 5000).sum();
@@ -50,7 +50,7 @@ class Worker1 implements Runnable {
 			sum = sum + numbers[i];
 		}
 
-		SumOfNumberRunnable.add(sum);
+		SumOfNumberRunnableOldStyle.add(sum);
 	}
 
 }
@@ -69,7 +69,7 @@ class Worker2 implements Runnable {
 			sum = sum + numbers[i];
 
 		}
-		SumOfNumberRunnable.add(sum);
+		SumOfNumberRunnableOldStyle.add(sum);
 	}
 
 }
